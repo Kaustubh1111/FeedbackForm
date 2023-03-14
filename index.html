@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhyaz feedback form</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            animation: animate 1s;
+        } 
+        .web-header img{
+            margin:20px;
+        }
+        .background{
+            background-image: linear-gradient(to top left, #000428, #004e92);
+        }
+        .form-header{
+            margin-top: -10px;
+        }
+        .content{
+            background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59);
+            border-radius: 10px;
+            width: 600px;
+            top: 50px;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .input{
+            border: 1px solid red;
+            border-radius: 6px;
+            margin: 5px;
+            padding: 5px;
+            width:90%;
+            transition: .5s;
+            outline: none;
+        }
+        .input:focus{
+            border-radius: 15px;
+            border-color: #20e70e;
+            padding:7px;
+            outline: none;
+        }
+    
+        @keyframes animate{
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .btn{
+            margin:10px;
+            line-height: 1.5;
+            background-color: rgb(154, 211, 230);
+            border: 1px solid black;
+            padding: 10px 28px;
+            display: inline-block;
+            border-radius: 30px;
+            color: #080c0c;
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 16px;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+            transition: color 0.3s ease;
+        }
+       
+        .btn:hover{
+            color: black;
+            background-color: #afffce;
+            border-radius: 20px;
+            box-shadow: 2px 0 40px 6px #3b87fa;
+        }
+
+        @media only screen and (max-width: 700px){
+            .content{
+                width: 90%;
+                height:100%;
+            }
+        }
+    </style>
+</head>
+<body class="background">
+    <section class="content">
+        <center>
+            <div class="form">
+                <div class="web-header">
+                    <a href="https://www.abhyaz.com/"><img src="abhyaz_logo.jpg" width="100" height="100" alt="Abhyaz logo"></a>
+                    <h3 class="form-header" style="color: rgb(12, 10, 8);">Feedback form</h3>
+                </div>
+                <form action="#" method="POST">
+                    <!-- action="https://formspree.io/my_table_name/my_key"  Formspree API to take feedback content to registered email  -->
+                    <div class="input-group">
+                
+                        <input class="input" type="text" placeholder="User Name" name="user_name" required size="25">
+                        <input class="input" type="email" placeholder="Email Address" name="email" size="40"required> <br>
+                        <input class="input" type="Feedback topic" placeholder="Feedback topic" name="topic" size="50"required> <br>
+                        <textarea class="input" placeholder="Enter your feedback" name="feedback" required></textarea><br>
+                        <input class="btn" type="submit" value="Submit" name="submit">
+                        <input class="btn" type="reset" value="Reset" name="reset">
+                    </div>
+                </form>
+            </div>
+        </center>
+    </section>
+
+</body>
+</html>
